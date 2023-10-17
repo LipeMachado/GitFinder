@@ -5,17 +5,17 @@ export function ProfileCard({ avatar_url, followers, following, location, name }
 
     return (
         <>
-            <div className="w-[90%] sm:w-[500px] h-[300px] mt-6 sm:mt-12 rounded border-[1px] border-[#7858A6] bg-[#19191F] text-[#f6f6f7] select-none">
-                <div className="flex items-center py-4 px-5">
+            <div className="w-[90%] sm:w-[500px] h-full sm:h-[300px] mt-6 sm:mt-12 rounded border-[1px] border-[#7858A6] bg-[#19191F] text-[#f6f6f7] select-none">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 items-center py-4 px-5">
                     <div className="">
                         <img className="w-[70px] h-[60px] rounded" src={avatar_url} />
                     </div>
-                    <div className="w-full flex items-center justify-around">
-                        <div className="flex flex-col gap-1">
-                            <h2 className="text-lg font-bold">{name}</h2>
-                            <div className="flex justify-center items-center gap-1 mr-10">
+                    <div className="w-full flex flex-col sm:flex-row gap-2 sm:gap-0 items-center justify-around">
+                        <div className="flex flex-col gap-1 items-center justify-center text-center">
+                            <h2 className="text-sm sm:text-lg font-bold">{name}</h2>
+                            <div className="flex justify-center items-center gap-1 mr-0 sm:mr-10">
                                 <BiMap />
-                                <span className="text-xs">{location}</span>
+                                <span className="sm:text-xs">{location}</span>
                             </div>
                         </div>
                         <div className="flex justify-center items-center gap-5">
