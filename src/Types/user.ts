@@ -1,7 +1,7 @@
 export type UserProps = {
-    AvatarUrl: string,
-    Name: string,
-    Location: string,
-    Followers: number,
-    Following: number,
+    avatar_url: string,
+    name: string,
+    location: string,
+    followers: number,
+    following: number,
 }

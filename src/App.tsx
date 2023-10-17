@@ -10,7 +10,15 @@ export function App() {
   const loadUser = async (userName: string) => {
     const res = await fetch(`https://api.github.com/users/${userName}`)
     const data = await res.json()
-    console.log(data)
+    const { avatar_url, name, location, followers, following } = data
+    const userData: UserProps = {
+      avatar_url,
+      followers,
+      following,
+      location,
+      name
+    }
+    setUser(userData)
   }
 
   return (
@@ -26,7 +34,7 @@ export function App() {
           <SearchBar LoadUser={loadUser} />
         </div>
         <div className="w-full flex justify-center items-center">
-          <ProfileCard />
+          {user && <ProfileCard {...user} />}
         </div>
       </div>
     </>
