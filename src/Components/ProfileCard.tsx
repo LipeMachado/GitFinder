@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { BiMap } from "react-icons/bi";
 
 export function ProfileCard() {
+    const [preImage, setPreImage] = useState()
+
     return (
         <>
             <div className="w-[90%] sm:w-[500px] h-[300px] mt-6 sm:mt-12 rounded border-[1px] border-[#7858A6] bg-[#19191F] text-[#f6f6f7] select-none">

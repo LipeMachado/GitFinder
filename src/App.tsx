@@ -1,8 +1,18 @@
+import { useEffect, useState } from 'react';
 import { FiGithub } from 'react-icons/fi';
 import { SearchBar } from './Components/SearchBar';
 import { ProfileCard } from './Components/ProfileCard';
+import { UserProps } from './Types/user';
 
 export function App() {
+  const [user, setUser] = useState<UserProps | null>(null);
+
+  const loadUser = async (userName: string) => {
+    const res = await fetch(`https://api.github.com/users/${userName}`)
+    const data = await res.json()
+    console.log(data)
+  }
+
   return (
     <>
       <div className="">
@@ -13,7 +23,7 @@ export function App() {
           <h1 className="text-3xl md:text-4xl text-[#f6f6f7] pt-10">Seja bem vindo(a) ao GitFinder</h1>
         </div>
         <div className="w-full flex justify-center items-center">
-          <SearchBar />
+          <SearchBar LoadUser={loadUser} />
         </div>
         <div className="w-full flex justify-center items-center">
           <ProfileCard />
