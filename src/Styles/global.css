@@ -14,8 +14,19 @@ html {
 
 body {
   background-image: url('../Assets/Background.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #7359D2;
+  border-radius: 14px;
 }

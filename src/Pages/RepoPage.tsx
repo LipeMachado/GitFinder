@@ -23,12 +23,18 @@ export function RepoPage() {
 
     return (
         <>
-            <div className="text-white">
-                <Link to="/">Voltar</Link>
-                {repo.map((repos, index) => (
-                    <RepoCard key={index} {...repos as RepositoresProps} />
-                ))}
-            </div>
+            <section className="relative z-10">
+                <div className="text-white">
+                    <div className="w-full flex flex-col items-center justify-center text-center mb-10 select-none">
+                        <h1 className="text-3xl md:text-4xl text-[#f6f6f7] pt-10">Seja bem vindo(a) ao GitFinder</h1>
+                        <span className="text-lg md:text-xl text-gray-400 pt-3">Clique na foto para te redirecionar ao GitHub.</span>
+                    </div>
+                    <Link to="/">Voltar</Link>
+                    {repo.map((repos, index) => (
+                        <RepoCard key={index} {...repos as RepositoresProps} />
+                    ))}
+                </div>
+            </section>
         </>
     )
 }
