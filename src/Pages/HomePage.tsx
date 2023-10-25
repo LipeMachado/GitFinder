@@ -39,7 +39,7 @@ export function HomePage() {
 
     return (
         <>
-            <div className="">
+            <div>
                 <nav className="w-full pt-6 flex items-center justify-center">
                     <FiGithub size="40" color="#F6F6F7" />
                 </nav>
