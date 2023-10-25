@@ -5,5 +5,5 @@ export type UserProps = {
     followers: number,
     following: number,
     html_url: string,
-
+    login: string,
 }

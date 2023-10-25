@@ -1,7 +1,8 @@
 import { BiMap } from "react-icons/bi";
 import { UserProps } from "../Types/user";
+import { Link } from "react-router-dom";
 
-export function ProfileCard({ avatar_url, followers, following, location, name, html_url }: UserProps) {
+export function ProfileCard({ avatar_url, followers, following, location, name, html_url, login }: UserProps) {
 
     return (
         <>
@@ -33,6 +34,9 @@ export function ProfileCard({ avatar_url, followers, following, location, name, 
                             </div>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <Link to={`/repositorios/${login}`}>Ver repositórios</Link>
                 </div>
             </div>
         </>
