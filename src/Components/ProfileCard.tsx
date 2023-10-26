@@ -6,7 +6,7 @@ export function ProfileCard({ avatar_url, followers, following, location, name, 
 
     return (
         <>
-            <div className="w-[90%] sm:w-[500px] py-3 mt-6 sm:mt-12 rounded border-[1px] border-[#7858A6] bg-[#19191F] text-[#f6f6f7] select-none">
+            <div className="w-[90%] sm:w-[500px] py-3 mt-6 mb-6 sm:mt-12 rounded border-[1px] border-[#7858A6] bg-[#19191F] text-[#f6f6f7] select-none">
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 items-center py-4 px-5">
                     <a href={html_url} target="_blank">
                         <img className="w-[70px] h-[70px] sm:h-[60px] rounded" src={avatar_url} />
@@ -35,8 +35,13 @@ export function ProfileCard({ avatar_url, followers, following, location, name, 
                         </div>
                     </div>
                 </div>
-                <div>
-                    <Link to={`/repositorios/${login}`}>Ver repositórios</Link>
+                <div className="w-full flex justify-center items-center my-5">
+                    <Link
+                        to={`/repositorios/${login}`}
+                        className="border-[#7858A6] border-[1px] rounded bg-[#1f1f26] hover:bg-[#1f1f26]/50 transition-colors py-2 px-6"
+                    >
+                        Ver repositórios
+                    </Link>
                 </div>
             </div>
         </>
