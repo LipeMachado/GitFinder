@@ -34,7 +34,7 @@ export function RepoPage() {
                             <span className="group-hover:text-[#b383f6] transition-colors text-xl">Voltar</span>
                         </Link>
                     </div>
-                    <div className="w-full grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] justify-center gap-5 px-10 mt-[60px]">
+                    <div className="w-full grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] justify-center gap-5 px-10 mt-[60px] mb-5">
                         {repo.map((repos, index) => (
                             <RepoCard key={index} {...repos as RepositoresProps} />
                         ))}
